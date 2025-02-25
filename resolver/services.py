@@ -24,5 +24,5 @@ def resolve_dns(domain, record_type='A'):
     except dns.resolver.Timeout:
         raise ValueError("DNS query timed out")
 
-print(resolve_dns('google.com','A'))
+
 
