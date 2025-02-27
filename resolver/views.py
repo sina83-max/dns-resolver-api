@@ -2,8 +2,11 @@ from django.core.serializers import serialize
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.reverse import reverse
 from .services import resolve_dns
 from .serializers import DnsResponseSerializer
+
+
 
 class DnsResolveView(APIView):
 
@@ -25,4 +28,5 @@ class DnsResolveView(APIView):
                 {'error': str(e)},
                 status=status.HTTP_400_BAD_REQUEST
             )
+
 
